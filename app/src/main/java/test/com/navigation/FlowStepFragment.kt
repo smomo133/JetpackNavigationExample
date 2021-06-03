@@ -31,7 +31,10 @@ class FlowStepFragment : Fragment() {
             //Navigation.createNavigateOnClickListener(R.id.next_action, null).onClick(view)
             //Navigation.createNavigateOnClickListener(R.id.home_dest, null).onClick(view)
             //TODO using NavController.navigate(action_id or destination_id)
-            Navigation.findNavController(view).navigate(R.id.next_action)
+            //Navigation.findNavController(view).navigate(R.id.next_action)
+            //TODO using NavController.navigate(action)
+            val action = FlowStepFragmentDirections.nextAction()
+            Navigation.findNavController(view).navigate(action)
         }
     }
 
